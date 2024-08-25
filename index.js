@@ -4,6 +4,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to my API!');
+});
+
 // GET endpoint
 app.get('/bfhl', (req, res) => {
     res.status(200).json({
